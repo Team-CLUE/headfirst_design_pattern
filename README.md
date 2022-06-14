@@ -5,7 +5,7 @@ Implement `Head First Design Pattern` book's contents for python
 
 # 🎯 Goal
 1. Advanced programming skill
-2. Thinking of suitable design pattern for ML
+2. Thinking and application of Design Patterns appropriate to ML
 3. Cooperate with CI/CD with auto formatting packages
 <br>
 
