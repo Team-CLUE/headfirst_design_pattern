@@ -1,20 +1,20 @@
 # Description
 Implement `Head First Design Pattern` book's contents for python
 ![img](assets/head_first_img.jpeg)
-
+<br>
 
 # Goal
 1. Advanced programming skill
 2. Thinking of suitable design pattern for ML
 3. Cooperate with CI/CD with auto formatting packages
-
+<br>
 
 # Rules
 1. Bi-weekly meeting at wednesday 8 p.m.
 2. Pull request after any implementation
 3. Assignee should hold a meeting to explain implementation
 4. Merge PR after review , at least 2 people approve required
-
+<br>
 
 # Contributors
 Kim gangmin|Kim donghyun|Yang junhyeok|Lee jonghyeok|Lim gyeonghyeon|
