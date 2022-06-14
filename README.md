@@ -1,6 +1,6 @@
 # Description
 Implement `Head First Design Pattern` book's contents for python
-![img](assets/head_first_img.jpeg)
+![img](assets/head_first_img.jpeg)<br>
 <br>
 
 # Goal
