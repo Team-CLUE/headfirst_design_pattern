@@ -1,0 +1,16 @@
+version: 1
+labels:
+  - label: "WIP"
+    title: "^WIP:.*"
+  - label: "feature"
+    branch: "^feature/.*"
+  - label: "bugfix"
+    branch: "^bugfix/.*"
+  - label: "enh"
+    branch: "^enhance/.*"
+  - label: "refactor"
+    branch: "^refactor/*"
+  - label: "docs"
+    branch: "^docs/*"
+  - label: "need-to-change-branch-name"
+    branch: "^(?!^feature/.*$)(?!^bugfix/.*$)(?!^enhance/.*$)(?!^style/.*$)(?!^docs/.*$).*$"
