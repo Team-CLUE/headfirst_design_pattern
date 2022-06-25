@@ -48,7 +48,7 @@ setup(
     author=", ".join(MEMBERS).strip(),
     author_email=", ".join(MEMBER_EMAILS).strip(),
     description="A repository for implementations related to design pattern projects by CLUE team members",
-    keywords="mrx-triple-a",
+    keywords="hdfs_python",
     url="https://github.com/Team-CLUE/headfirst_design_pattern",
     project_urls={
         "Documentation": "https://github.com/Team-CLUE/headfirst_design_pattern",
