@@ -1,3 +1,7 @@
+[![Python 3.8.13](https://img.shields.io/badge/python-3.8.13-blue.svg)](https://www.python.org/downloads/release/python-385/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Imports: isort](https://img.shields.io/badge/imports-isort-white)](https://pycqa.github.io/isort/)
+[![Linting: flake8 & mypy & pylint](https://img.shields.io/badge/linting-flake8%20%26%20mypy%20%26%20pylint-green)](https://pypi.org/project/pytest-pylint/)
 ## 📋 Description
 Implement `Head First Design Pattern` book's contents for python
 ![img](assets/head_first_img.jpeg)<br>
