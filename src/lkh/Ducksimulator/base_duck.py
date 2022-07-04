@@ -1,5 +1,12 @@
 """
 각종 오리에 대한 정의 모듈
+
+Description:
+    추상클래스 BaseDuck 상속받아, 각각의 알맞은 Quack, Fly 행동을 하는 Duck 클래스 구현
+
+Author:
+    Name: KyungHyun Lim
+    Email: lkh1075@gmail.com
 """
 
 from abc import abstractmethod

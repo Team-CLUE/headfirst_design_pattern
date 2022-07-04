@@ -1,6 +1,14 @@
 """
 Duck Simulator Test 모듈
+
+Description:
+    Duck의 종류에 따라, Quack 및 Fly이 기능이 의도한대로 동작하는지 간단한 Test 수행
+
+Author:
+    Name: KyungHyun Lim
+    Email: lkh1075@gmail.com
 """
+
 
 from lkh.Ducksimulator.base_duck import RealDuck, RubberDuck
 

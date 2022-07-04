@@ -1,5 +1,12 @@
 """
 하늘을 나는 행동들에 대한 클래스를 정의한 모듈
+
+Description:
+    추상클래스 FlyBehavior 상속받아, 각각의 Fly 행동들을 클래스로 구현
+
+Author:
+    Name: KyungHyun Lim
+    Email: lkh1075@gmail.com
 """
 
 from abc import abstractmethod
