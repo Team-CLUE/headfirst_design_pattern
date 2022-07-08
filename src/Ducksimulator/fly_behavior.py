@@ -13,8 +13,9 @@ from abc import abstractmethod
 
 
 class FlyBehavior:
-    """
-    나는 행동의 종류에 따라 클래스를 정의하기 위한 부모 클래스
+    """summary
+    Description:
+        나는 행동의 종류에 따라 클래스를 정의하기 위한 Abstractive class
     """
 
     @abstractmethod
@@ -30,24 +31,36 @@ class FlyBehavior:
 
 
 class Fly(FlyBehavior):
-    """
-    FlyBehavior 중 날 수 있는 행동 클래스
+    """summary
+    Description:
+        FlyBehavior 중 날 수 있는 행동 클래스
     """
 
     def fly(self) -> None:
-        """
-        나는 행동에 대한 정의
+        """나는 행동에 대한 정의
+
+        Args:
+            None
+
+        Returns:
+            None
         """
         print("무한한 공간 저 너머로!")
 
 
 class NoFly(FlyBehavior):
-    """
-    FlyBehavior 중 날지 못하는 행동 클래스
+    """summary
+    Description:
+        FlyBehavior 중 날지 못하는 행동 클래스
     """
 
     def fly(self) -> None:
-        """
-        날지 못하는 행동에 대한 정의
+        """날지 못하는 행동에 대한 정의
+
+        Args:
+            None
+
+        Returns:
+            None
         """
         print("<< 날지 못함 >>")
