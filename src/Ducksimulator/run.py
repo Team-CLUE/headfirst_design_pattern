@@ -10,7 +10,7 @@ Author:
 """
 
 
-from lkh.Ducksimulator.base_duck import RealDuck, RubberDuck
+from Ducksimulator.base_duck import RealDuck, RubberDuck
 
 
 def main() -> None:

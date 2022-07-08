@@ -11,8 +11,8 @@ Author:
 
 from abc import abstractmethod
 
-from lkh.Ducksimulator.fly_behavior import Fly, FlyBehavior, NoFly
-from lkh.Ducksimulator.quack_behavior import Quack, QuackBehavior, Squeak
+from Ducksimulator.fly_behavior import Fly, FlyBehavior, NoFly
+from Ducksimulator.quack_behavior import Quack, QuackBehavior, Squeak
 
 
 class BaseDuck:
@@ -25,25 +25,45 @@ class BaseDuck:
 
     @abstractmethod
     def __init__(self) -> None:
-        """
-        상속받는 클래스에 따라 행동 선택 구현
+        """상속받는 클래스에 따라 행동 선택 구현
+
+        Args:
+            None
+
+        Returns:
+            None
         """
 
     @abstractmethod
     def display(self) -> None:
-        """
-        상속받는 클래스에 따라 오리의 정보 출력 구현
+        """상속받는 클래스에 따라 오리의 정보 출력 구현
+
+        Args:
+            None
+
+        Returns:
+            None
         """
 
     def perform_quack(self) -> None:
-        """
-        상속받는 클래스에 따라 오리가 소리를 내는 행동 수행
+        """상속받는 클래스에 따라 오리가 소리를 내는 행동 수행
+
+        Args:
+            None
+
+        Returns:
+            None
         """
         self.quackbehavior.quack()
 
     def perform_fly(self) -> None:
-        """
-        상속받는 클래스에 따라 오리가 소리를 내는 행동 수행
+        """상속받는 클래스에 따라 오리가 소리를 내는 행동 수행
+
+        Args:
+            None
+
+        Returns:
+            None
         """
         self.flybehavior.fly()
 
@@ -62,8 +82,13 @@ class RealDuck(BaseDuck):
         self.flybehavior = Fly()
 
     def display(self) -> None:
-        """
-        오리의 정보 출력
+        """오리의 정보 출력
+
+        Args:
+            None
+
+        Returns:
+            None
         """
         print("저는 진짜 오리입니다.")
 
@@ -74,9 +99,7 @@ class RubberDuck(BaseDuck):
     """
 
     def __init__(self) -> None:
-        """
-        오리의 행동 정의
-        """
+        """오리의 행동 정의"""
         super().__init__()
         self.quackbehavior = Squeak()
         self.flybehavior = NoFly()
