@@ -31,7 +31,8 @@ MEMBERS = [
     "Jonghyuk Lee",
     "Junhyeok Yang",
     "Kyunghyun Lim",
-    "Seyoung Kim"
+    "Seyoung Kim",
+    "Seongjin Park",
 ]
 MEMBER_EMAILS = [
     "rkdqus2006@naver.com",
@@ -39,7 +40,8 @@ MEMBER_EMAILS = [
     "jonhyuk0922@naver.com",
     "surfing2003@naver.com",
     "lkh1075@yonsei.ac.kr",
-    "seftware99@gmail.com"
+    "seftware99@gmail.com",
+    "sh.park@gmail.com",
 ]
 setup(
     name="headfirst_design_pattern",
