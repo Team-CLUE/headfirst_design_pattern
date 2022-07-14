@@ -32,7 +32,7 @@ MEMBERS = [
     "Junhyeok Yang",
     "Kyunghyun Lim",
     "Seyoung Kim",
-    "Seongjin Park",
+    "Sungjin Park",
 ]
 MEMBER_EMAILS = [
     "rkdqus2006@naver.com",
