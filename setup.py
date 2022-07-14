@@ -25,21 +25,14 @@ def find_version(*file_path_parts):
     raise RuntimeError("Unable to find version string.")
 
 
-MEMBERS = [
-    "Donghyun Kim",
-    "Ganmin Kim",
-    "Jonghyuk Lee",
-    "Junhyeok Yang",
-    "Kyunghyun Lim",
-    "Seyoung Kim"
-]
+MEMBERS = ["Donghyun Kim", "Ganmin Kim", "Jonghyuk Lee", "Junhyeok Yang", "Kyunghyun Lim", "Seyoung Kim"]
 MEMBER_EMAILS = [
     "rkdqus2006@naver.com",
     "rlarkdals7@gmail.com",
     "jonhyuk0922@naver.com",
     "surfing2003@naver.com",
     "lkh1075@yonsei.ac.kr",
-    "seftware99@gmail.com"
+    "seftware99@gmail.com",
 ]
 setup(
     name="headfirst_design_pattern",
