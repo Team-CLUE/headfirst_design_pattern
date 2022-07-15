@@ -89,9 +89,9 @@ class StatisticsDisplay(Observer, Display):
             None
         """
         print(
-            f"평균/최고/최저: {self.temperature:.3f}F | \
-                {self.temperature+2.3:.3f}F | \
-                {self.temperature-2.5:.3f}",
+            f"평균/최고/최저: {self.temperature:.3f}F | "
+            f"{self.temperature+2.3:.3f}F | "
+            f"{self.temperature-2.5:.3f}F",
         )
 
 
