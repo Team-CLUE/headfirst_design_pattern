@@ -10,11 +10,9 @@ format:
 
 lint:
 	pytest src/ --pylint --flake8 --mypy
-	# nbqa pytest src/ --pylint --flake8 --mypy
 
 lint-all:
 	pytest src/ --pylint --flake8 --mypy --cache-clear
-	# nbqa pytest src/ --pylint --flake8 --mypy --cache-clear
 
 lint-staged:
 ifdef STAGED
