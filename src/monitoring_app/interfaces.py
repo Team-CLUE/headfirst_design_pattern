@@ -22,7 +22,7 @@ class Observer:
         pass
 
     @abstractmethod
-    def update(self, temp: float, humidity: float, pressure: float) -> None:
+    def update(self) -> None:
         """상속받는 클래스에 따라 행동 선택 구현
 
         Args:

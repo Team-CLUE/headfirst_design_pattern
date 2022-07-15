@@ -59,7 +59,7 @@ class WeatherData(Subject):
             None
         """
         for observer in self.observer_list:
-            observer.update(self.temperature, self.humidity, self.pressure)
+            observer.update()
 
     def set_measurements(self, temp: float, humidity: float, pressure: float) -> None:
         """새로운 관측값을 업데이트 및 observer들에게 전파

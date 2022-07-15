@@ -26,7 +26,7 @@ class CurrentConditionDisplay(Observer, Display):
         self.weather_data: WeatherData = weather_data
         self.weather_data.register_observer(self)
 
-    def update(self, temp: float, humidity: float, pressure: float) -> None:
+    def update(self) -> None:
         """새로운 관측값을 업데이트
 
         Args:
@@ -37,8 +37,8 @@ class CurrentConditionDisplay(Observer, Display):
         Returns:
             None
         """
-        self.temperature = temp
-        self.humidity = humidity
+        self.temperature = self.weather_data.temperature
+        self.humidity = self.weather_data.temperature
         self.display()
 
     def display(self) -> None:
@@ -65,7 +65,7 @@ class StatisticsDisplay(Observer, Display):
         self.weather_data: WeatherData = weather_data
         self.weather_data.register_observer(self)
 
-    def update(self, temp: float, humidity: float, pressure: float) -> None:
+    def update(self) -> None:
         """새로운 관측값을 업데이트
 
         Args:
@@ -76,7 +76,7 @@ class StatisticsDisplay(Observer, Display):
         Returns:
             None
         """
-        self.temperature = temp
+        self.temperature = self.weather_data.temperature
         self.display()
 
     def display(self) -> None:
@@ -107,7 +107,7 @@ class ForecastDisplay(Observer, Display):
         self.weather_data: WeatherData = weather_data
         self.weather_data.register_observer(self)
 
-    def update(self, temp: float, humidity: float, pressure: float) -> None:
+    def update(self) -> None:
         """새로운 관측값을 업데이트
 
         Args:
@@ -118,7 +118,7 @@ class ForecastDisplay(Observer, Display):
         Returns:
             None
         """
-        self.temperature = temp
+        self.temperature = self.weather_data.temperature
         self.display()
 
     def display(self) -> None:
