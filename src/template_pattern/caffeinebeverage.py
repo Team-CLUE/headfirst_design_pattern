@@ -30,7 +30,8 @@ class CaffeineBeverage(ABC):
         self.boil_water()
         self.brew()
         self.pour_in_cup()
-        self.add_condiments()
+        if self.customer_wants_condiments():
+            self.add_condiments()
 
     @classmethod
     def boil_water(cls) -> None:
@@ -55,6 +56,18 @@ class CaffeineBeverage(ABC):
             None
         """
         print("음료를 컵에 따른다.")
+
+    @classmethod
+    def customer_wants_condiments(cls) -> bool:
+        """
+        hook 역할 함수
+
+        Args:
+            None
+        Returns:
+            (bool): True or False
+        """
+        return True
 
     @abstractmethod
     def brew(self) -> None:
@@ -107,6 +120,23 @@ class Tea(CaffeineBeverage):
         """
         print("레몬을 추가한다.")
 
+    @classmethod
+    def customer_wants_condiments(cls) -> bool:
+        """
+        사용자의 입력을 바탕으로 참 또는 거짓을 반환하는 함수
+
+        Args:
+            None
+        Returns:
+            (bool): True or False
+        """
+        answer = input("차에 레몬을 넣을까요? (y/n)")
+
+        if answer == "y":
+            return True
+
+        return False
+
 
 class Coffee(CaffeineBeverage):
     """
@@ -135,3 +165,20 @@ class Coffee(CaffeineBeverage):
             None
         """
         print("설탕과 우유를 추가한다.")
+
+    @classmethod
+    def customer_wants_condiments(cls) -> bool:
+        """
+        사용자의 입력을 바탕으로 참 또는 거짓을 반환하는 함수
+
+        Args:
+            None
+        Returns:
+            (bool): True or False
+        """
+        answer = input("커피에 우유와 설탕을 넣을까요? (y/n)")
+
+        if answer == "y":
+            return True
+
+        return False
