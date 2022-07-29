@@ -13,7 +13,7 @@ from typing import final
 class CaffeineBeverage(ABC):
     """
     Description:
-        카페인 생성의 기본이 되는 추상 클래스
+        카페인 음료 생성의 기본이 되는 추상 클래스
     """
 
     @final
@@ -77,3 +77,61 @@ class CaffeineBeverage(ABC):
         Returns:
             None
         """
+
+
+class Tea(CaffeineBeverage):
+    """
+    Description:
+        추상 클래스를 바탕으로 생성한 서브 클래스
+    """
+
+    def brew(self) -> None:
+        """
+        홍차(서브클래스)에 맞는 함수 생성
+
+        Args:
+            None
+        Returns:
+            None
+        """
+        print("찻잎을 우려낸다.")
+
+    def add_condiments(self) -> None:
+        """
+        홍차(서브클래스)에 맞는 함수 생성
+
+        Args:
+            None
+        Returns:
+            None
+        """
+        print("레몬을 추가한다.")
+
+
+class Coffee(CaffeineBeverage):
+    """
+    Description:
+        추상 클래스를 바탕으로 생성한 서브 클래스
+    """
+
+    def brew(self) -> None:
+        """
+        커피(서브 클래스)에 맞는 함수 생성
+
+        Args:
+            None
+        Returns:
+            None
+        """
+        print("커피를 우려낸다.")
+
+    def add_condiments(self) -> None:
+        """
+        커피(서브 클래스)에 맞는 함수 생성
+
+        Args:
+            None
+        Returns:
+            None
+        """
+        print("설탕과 우유를 추가한다.")
