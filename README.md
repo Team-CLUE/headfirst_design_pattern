@@ -24,19 +24,11 @@ Implement `Head First Design Pattern` book's contents for python
 <br>
 
 ## ⚙️ Initial Setup
-1. Install `make` command appropriate for your OS
-    - Linux / Mac : System already contain `make` command
-    - Window : [make file install](http://gnuwin32.sourceforge.net/packages/make.htm) & add `make.exe` path to environment path
-
-2. Initiate repository setup
-Use python virtual environment you have (conda, pyenv ...)
+- Linux / MacOS : run below
+- Window : follwo [setup](./setup/WINDOW_SETUP.md) directory contents and run below
 ```bash
-$ conda(pyenv) activate VIRTUAL_ENV_NAME
-(VIRTUAL_ENV_NAME) $
-```
-
-```bash
-(VIRTUAL_ENV_NAME) $ make init
+# Run your own virtual python environment
+$ make init
 ```
 <br>
 
