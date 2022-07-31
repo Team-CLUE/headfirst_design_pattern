@@ -19,4 +19,4 @@ PS C:> wsl -l -v
 
 ## Customizing
 If you want to automatically make your custom window environment
-Just run `setup_window.sh` in this directory with administor authorized state
+Just run `setup-window.sh` located this directory with administor authorized state
