@@ -26,7 +26,7 @@ def set_default_plugins(zshrc: str):
     """
     zshrc = re.sub(
         "plugins=\(.*\)",
-        "plugins=\( git zsh-autosuggestions zsh-syntax-highlighting \)",
+        "plugins=( git zsh-autosuggestions zsh-syntax-highlighting )",
         zshrc,
     )
     return zshrc
