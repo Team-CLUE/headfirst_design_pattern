@@ -18,11 +18,6 @@ class Pizza(ABC):
         다양한 피자를 구현하는데 활용하기 위한 클래스
     """
 
-    _name: str = ""
-    _dough: str = ""
-    _sauce: str = ""
-    _toppings: List[str] = []
-
     @abstractmethod
     def __init__(self) -> None:
         """
@@ -33,6 +28,10 @@ class Pizza(ABC):
         Returns:
             None
         """
+        self._name: str = ""
+        self._dough: str = ""
+        self._sauce: str = ""
+        self._toppings: List[str] = []
 
     def get_name(self) -> str:
         """
