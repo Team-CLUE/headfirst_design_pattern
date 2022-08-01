@@ -38,7 +38,7 @@ class CurrentConditionDisplay(Observer, Display):
             None
         """
         self.temperature = self.weather_data.temperature
-        self.humidity = self.weather_data.temperature
+        self.humidity = self.weather_data.humidity
         self.display()
 
     def display(self) -> None:
