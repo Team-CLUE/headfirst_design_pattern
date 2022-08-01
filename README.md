@@ -25,7 +25,7 @@ Implement `Head First Design Pattern` book's contents for python
 
 ## ⚙️ Initial Setup
 - Linux / MacOS : run below
-- Window : follwo [setup](./setup/WINDOW_SETUP.md) directory contents and run below
+- Window : follow [setup](./setup/WINDOW_SETUP.md) directory contents and run below
 ```bash
 # Run your own virtual python environment
 $ make init
