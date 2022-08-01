@@ -96,6 +96,28 @@ class Pizza(ABC):
         print("상자에 피자 담기")
 
 
+class BasePizza(Pizza):
+    """
+    Description:
+        Pizza 클래스를 활용해 만든 서브 클래스
+    """
+
+    def __init__(self) -> None:
+        """
+        서브 클래스에 따라 해당 값 입력
+
+        Args:
+            None
+        Returns:
+            None
+        """
+        super().__init__()
+        self._name = "기본 피자"
+        self._dough = "기본 도우"
+        self._sauce = "기본 소스"
+        self._toppings.append("기본 토핑")
+
+
 class NYCheesePizza(Pizza):
     """
     Description:
