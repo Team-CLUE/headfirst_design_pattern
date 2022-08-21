@@ -5,8 +5,6 @@ STAGED := $(shell git diff --cached --name-only --diff-filter=ACMR -- 'src/***.p
 format:
 	black .
 	isort .
-	nbqa black .
-	nbqa isort .
 
 lint:
 	pytest src/ --pylint --flake8 --mypy
@@ -17,7 +15,6 @@ lint-all:
 lint-staged:
 ifdef STAGED
 	pytest $(STAGED) --pylint --flake8 --mypy --cache-clear
-	# nbqa pytest $(STAGED) --pylint --flake8 --mypy --cache-clear
 else
 	@echo "No Staged Python File in the src folder"
 endif
