@@ -27,6 +27,19 @@ class WeatherData(Subject):
         self.humidity: float = 0.0
         self.pressure: float = 0.0
 
+    def __new__(cls: Subject) -> Subject:
+        """클래스 생성시, 하나만 생성되도록 정의
+
+        Args:
+            cls: 클래스가 생성되면서 생긴 인스턴스 (따로 입력을 줄 필요 없음)
+
+        Returns:
+            유일한 WeatherData 인스턴스
+        """
+        if not hasattr(cls, "instance"):
+            cls.instance = super(WeatherData, cls).__new__(cls)
+        return cls.instance
+
     def register_observer(self, any_observer: Observer) -> None:
         """관리할 observer를 추가적으로 등록
 
