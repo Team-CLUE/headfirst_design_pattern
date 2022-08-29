@@ -18,8 +18,8 @@ jobs:
         uses: hkusu/review-assign-action@v1
         with:
           assignees: ${{ github.actor }}
-          reviewers: Kimdongui, Gangsss, jonhyuk0922, KyungHyunLim, surfing2003  # select from project members
-          max-num-of-reviewers: 4
+          reviewers: Kimdongui, Gangsss, jonhyuk0922, KyungHyunLim, surfing2003, Seyoung9304  # select from project members
+          max-num-of-reviewers: 5
           draft-keyword: WIP  # A keyword in the pull request title to treat as draft pull requests
 
   size-label:
