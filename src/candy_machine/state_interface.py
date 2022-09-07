@@ -1,8 +1,8 @@
 """
-Candy machine 상태클래스 정의
+Candy machine 상태 추상클래스(인터페이스) 정의
 
 Description:
-    상태 추상 클래스와 Candy machine이 가질수 있는 상태 클래스들을 정의합니다.
+    상태 추상 클래스 정의합니다.
 
 Author:
     Name: KyungHyun Lim
