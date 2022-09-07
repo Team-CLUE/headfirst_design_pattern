@@ -96,7 +96,7 @@ class HasQuarterState(State):
         """다이얼 회전시 상태변화 정의"""
         print("Candy가 나오고있습니다.")
         winner = random.randint(0, 10)
-        if winner == 0 and self.candy_machine.get_count > 1:
+        if winner == 0 and self.candy_machine.get_count() > 1:
             self.candy_machine.set_state(self.candy_machine.get_winner_state())
         else:
             self.candy_machine.set_state(self.candy_machine.get_sold_state())
