@@ -9,6 +9,8 @@ Author:
     Email: lkh1075@gmail.com
 """
 
+import random
+
 from candy_machine.dummy import CandyMachine
 from candy_machine.interface import State
 
@@ -93,7 +95,11 @@ class HasQuarterState(State):
     def turn_crank(self) -> None:
         """다이얼 회전시 상태변화 정의"""
         print("Candy가 나오고있습니다.")
-        self.candy_machine.set_state(self.candy_machine.get_sold_state())
+        winner = random.randint(0, 10)
+        if winner == 0 and self.candy_machine.get_count > 1:
+            self.candy_machine.set_state(self.candy_machine.get_winner_state())
+        else:
+            self.candy_machine.set_state(self.candy_machine.get_sold_state())
 
     def dispense(self) -> None:
         """알 제공시 상태변화 정의"""
@@ -126,3 +132,40 @@ class NoQuarterState(State):
     def dispense(self) -> None:
         """알 제공시 상태변화 정의"""
         print("동전을 넣어주세요")
+
+
+class WinnerState(State):
+    """summary
+    Description:
+        이벤트 당첨에 대한 변화 정의
+    """
+
+    def __init__(self, candy_machine: CandyMachine) -> None:
+        super().__init__()
+        self.candy_machine = candy_machine
+
+    def insert_quarter(self) -> None:
+        """동전 삽입시 상태변화 정의"""
+        print("이미 동전을 넣으셨습니다.")
+
+    def eject_quarter(self) -> None:
+        """동전 제거시 상태변화 정의"""
+        print("이미 Candy가 나오고 있습니다.")
+
+    def turn_crank(self) -> None:
+        """다이얼 회전시 상태변화 정의"""
+        print("손잡이는 한번만 돌려주세요. 이미 Candy가 나오고 있습니다.")
+
+    def dispense(self) -> None:
+        """알 제공시 상태변화 정의"""
+        self.candy_machine.release_candy()
+        if self.candy_machine.get_count() > 0:
+            self.candy_machine.set_state(self.candy_machine.get_soldout_state())
+        else:
+            self.candy_machine.release_candy()
+            print("축하합니다. 당첨되셨습니다.")
+            if self.candy_machine.get_count() > 0:
+                self.candy_machine.set_state(self.candy_machine.get_noquarter_state())
+            else:
+                print("Candy가 매진되었습니다.")
+                self.candy_machine.set_state(self.candy_machine.get_soldout_state())

@@ -15,6 +15,7 @@ from candy_machine.states import (
     NoQuarterState,
     SoldOutState,
     SoldState,
+    WinnerState,
 )
 
 
@@ -29,6 +30,7 @@ class CandyMachine:
         self.sold_state = SoldState(self)
         self.hasquarter_state = HasQuarterState(self)
         self.noquarter_state = NoQuarterState(self)
+        self.winner_state = WinnerState(self)
 
         self.state = State()
         self.count = number_candy
@@ -93,3 +95,7 @@ class CandyMachine:
     def get_sold_state(self) -> State:
         """판매중 상태 반환"""
         return self.sold_state
+
+    def get_winner_state(self) -> State:
+        """당첨 상태 반환"""
+        return self.winner_state
