@@ -51,6 +51,7 @@ class CandyMachine:
     def turn_crank(self) -> None:
         """다이얼 회전에 따른 상태 변화"""
         self.state.turn_crank()
+        self.state.dispense()
 
     def dispense(self) -> None:
         """Candy 제공에 따른 상태 변화"""
