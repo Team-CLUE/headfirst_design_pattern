@@ -19,6 +19,10 @@ class State:
     """
 
     @abstractmethod
+    def __init__(self) -> None:
+        """클래스 초기화"""
+
+    @abstractmethod
     def insert_quarter(self) -> None:
         """동전 삽입시 상태변화 정의"""
 
