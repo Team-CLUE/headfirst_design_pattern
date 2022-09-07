@@ -42,4 +42,4 @@ def test_basic_function() -> None:
 
     candy_machine.refill_candy(10)
 
-    assert candy_machine.get_count == 10, f"Incorrect Candy count, {candy_machine.get_count()}"
+    assert candy_machine.get_count() == 10, f"Incorrect Candy count, {candy_machine.get_count()}"

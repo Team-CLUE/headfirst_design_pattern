@@ -10,9 +10,12 @@ Author:
 """
 
 import random
+from typing import TYPE_CHECKING
 
-from candy_machine.dummy import CandyMachine
 from candy_machine.interface import State
+
+if TYPE_CHECKING:
+    from candy_machine.machine import CandyMachine
 
 
 class SoldState(State):
@@ -21,7 +24,7 @@ class SoldState(State):
         판매 상태에 대한 변화 정의
     """
 
-    def __init__(self, candy_machine: CandyMachine) -> None:
+    def __init__(self, candy_machine: "CandyMachine") -> None:
         super().__init__()
         self.candy_machine = candy_machine
 
@@ -52,7 +55,7 @@ class SoldOutState(State):
         매진 상태에 대한 변화 정의
     """
 
-    def __init__(self, candy_machine: CandyMachine) -> None:
+    def __init__(self, candy_machine: "CandyMachine") -> None:
         super().__init__()
         self.candy_machine = candy_machine
 
@@ -79,7 +82,7 @@ class HasQuarterState(State):
         동전 소유 상태에 대한 변화 정의
     """
 
-    def __init__(self, candy_machine: CandyMachine) -> None:
+    def __init__(self, candy_machine: "CandyMachine") -> None:
         super().__init__()
         self.candy_machine = candy_machine
 
@@ -112,7 +115,7 @@ class NoQuarterState(State):
         동전 없음 상태에 대한 변화 정의
     """
 
-    def __init__(self, candy_machine: CandyMachine) -> None:
+    def __init__(self, candy_machine: "CandyMachine") -> None:
         super().__init__()
         self.candy_machine = candy_machine
 
@@ -140,7 +143,7 @@ class WinnerState(State):
         이벤트 당첨에 대한 변화 정의
     """
 
-    def __init__(self, candy_machine: CandyMachine) -> None:
+    def __init__(self, candy_machine: "CandyMachine") -> None:
         super().__init__()
         self.candy_machine = candy_machine
 
