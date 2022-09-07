@@ -62,6 +62,10 @@ class CandyMachine:
         if self.count > 0:
             self.count -= 1
 
+    def refill_candy(self, candy: int) -> None:
+        """Candy 리필"""
+        self.count += candy
+
     def set_state(self, state: State) -> None:
         """Candy machine 상태 설정
 

@@ -39,3 +39,7 @@ def test_basic_function() -> None:
     assert (
         candy_machine.get_count() == 0
     ), f"There is no change on Candy count, {candy_machine.get_count()}"
+
+    candy_machine.refill_candy(10)
+
+    assert candy_machine.get_count == 10, f"Incorrect Candy count, {candy_machine.get_count()}"
