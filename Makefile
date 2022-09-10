@@ -9,6 +9,9 @@ format:
 lint:
 	pytest src/ --pylint --flake8
 
+test:
+	pytest tests/
+
 lint-all:
 	pytest src/ --pylint --flake8 --cache-clear
 

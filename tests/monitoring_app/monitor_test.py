@@ -19,7 +19,7 @@ from monitoring_app.displays import (
 from monitoring_app.weatherdata import WeatherData
 
 
-def info_update_test() -> None:
+def test_info_update() -> None:
     """새로운 관측값이 observer 들에게 제대로 전파되는지 테스트"""
     weather_data = WeatherData()
 

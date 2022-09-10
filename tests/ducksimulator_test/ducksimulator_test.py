@@ -13,7 +13,7 @@ Author:
 from ducksimulator.base import RealDuck, RubberDuck
 
 
-def ducksimoulator_test() -> None:
+def test_ducksimoulator() -> None:
     """
     Test 진행 함수
     """
