@@ -1,6 +1,22 @@
 #
 # According to PEP-518, https://www.python.org/dev/peps/pep-0518/
 #
+[project]
+name = "headfirst_design_pattern"
+version = "0.1.0"
+description="A repository for implementations related to design pattern projects by CLUE team members"
+requires-python = ">=3.8"
+authors = [
+    {name = "Donghyun Kim", email = "rkdqus2006@naver.com"},
+    {name = "Gangmin Kim", email = "rlarkdals7@gmail.com"},
+    {name = "Jonghyuk Lee", email = "jonhyuk0922@naver.com"},
+    {name = "Junhyeok Yang", email = "surfing2003@naver.com"},
+    {name = "Kyunghyun Lim", email = "lkh1075@yonsei.ac.kr"},
+    {name = "Seyoung Kim", email = "seftware99@gmail.com"},
+]
+readme = "README.md"
+urls = {Documentation = "https://github.com/Team-CLUE/headfirst_design_pattern", Codes = "https://github.com/Team-CLUE/headfirst_design_pattern"}
+
 [build-system]
 # Minimum requirements for the build system to execute, according to PEP-508
 requires = [
@@ -9,6 +25,9 @@ requires = [
     "wheel>=0.37"
 ]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.black]
 line-length = 105
