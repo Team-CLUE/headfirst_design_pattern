@@ -19,7 +19,7 @@ from monitoring_app.displays import (
 from monitoring_app.weatherdata import WeatherData
 
 
-def test_info_update() -> None:
+def info_update_test() -> None:
     """새로운 관측값이 observer 들에게 제대로 전파되는지 테스트"""
     weather_data = WeatherData()
 
@@ -43,7 +43,7 @@ def test_info_update() -> None:
     ), "forecast display's temperature has not been updated"
 
 
-def test_remove_and_register() -> None:
+def remove_and_register_test() -> None:
     """데이터 객체에 등록되어 있는 observer들을 정상적으로 제거, 등록할 수 있는지 테스트"""
     weather_data = WeatherData()
 
