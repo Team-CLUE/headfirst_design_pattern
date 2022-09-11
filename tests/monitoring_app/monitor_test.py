@@ -43,7 +43,7 @@ def test_info_update() -> None:
     ), "forecast display's temperature has not been updated"
 
 
-def remove_and_register_test() -> None:
+def test_remove_and_register() -> None:
     """데이터 객체에 등록되어 있는 observer들을 정상적으로 제거, 등록할 수 있는지 테스트"""
     weather_data = WeatherData()
 
