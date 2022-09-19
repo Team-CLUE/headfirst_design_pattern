@@ -12,7 +12,7 @@ Author:
 from candy_machine.machine import CandyMachine
 
 
-def test_basic_function() -> None:
+def basic_function_test() -> None:
     """기본적인 상태 변화 및 Candy 개수 변화에 대한 테스트"""
     candy_machine = CandyMachine(2)
 
