@@ -30,4 +30,4 @@ jobs:
       - name: Build python package
         run: |
           pip install wheel
-          python setup.py sdist bdist_wheel --universal
+          pip wheel .

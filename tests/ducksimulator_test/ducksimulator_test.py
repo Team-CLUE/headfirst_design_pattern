@@ -13,7 +13,7 @@ Author:
 from ducksimulator.base import RealDuck, RubberDuck
 
 
-def main() -> None:
+def test_ducksimoulator() -> None:
     """
     Test 진행 함수
     """
@@ -29,7 +29,3 @@ def main() -> None:
     rubber_duck.display()
     rubber_duck.perform_quack()
     rubber_duck.perform_fly()
-
-
-if __name__ == "__main__":
-    main()
