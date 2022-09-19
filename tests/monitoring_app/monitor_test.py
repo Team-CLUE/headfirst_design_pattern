@@ -21,17 +21,21 @@ from monitoring_app.weatherdata import WeatherData
 
 def test_info_update() -> None:
     """새로운 관측값이 observer 들에게 제대로 전파되는지 테스트"""
-    weather_data = WeatherData()
+    weather_data1 = WeatherData()
+    weather_data2 = WeatherData()
 
-    current_display = CurrentConditionDisplay(weather_data)
-    static_display = StatisticsDisplay(weather_data)
-    forecast_display = ForecastDisplay(weather_data)
+    assert weather_data1 is not None, "Class isn't createad!"
+    assert weather_data1 == weather_data2, "One or more classes have been created."
+
+    current_display = CurrentConditionDisplay(weather_data1)
+    static_display = StatisticsDisplay(weather_data1)
+    forecast_display = ForecastDisplay(weather_data1)
 
     temperature = random.randrange(-20, 120)
     humidity = random.randrange(0, 100)
     pressure = random.randrange(0, 100)
 
-    weather_data.set_measurements(temp=temperature, humidity=humidity, pressure=pressure)
+    weather_data1.set_measurements(temp=temperature, humidity=humidity, pressure=pressure)
 
     assert (
         current_display.temperature == temperature
