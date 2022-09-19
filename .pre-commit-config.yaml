@@ -26,6 +26,13 @@ repos:
         language: system
         entry: make lint-staged
 
+  - repo: local
+    hooks:
+      - id: test
+        name: test
+        language: system
+        entry: make test
+
   - repo: https://github.com/asottile/add-trailing-comma
     rev: v2.0.1
     hooks:
