@@ -74,8 +74,6 @@ class CandyMachine:
         Args:
             state (State): Candy machine에 셋팅할 상태
 
-        Returns:
-            None
         """
         self.state = state
 
