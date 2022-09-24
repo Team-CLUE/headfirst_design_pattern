@@ -20,10 +20,7 @@ from candy_machine.states import (
 
 
 class CandyMachine:
-    """summary
-    Description:
-        Candy machine action 정의
-    """
+    """Candy machine action 정의"""
 
     def __init__(self, number_candy: int) -> None:
         self.soldout_state = SoldOutState(self)
@@ -63,14 +60,19 @@ class CandyMachine:
             self.count -= 1
 
     def refill_candy(self, candy: int) -> None:
-        """Candy 리필"""
+        """Candy 리필
+
+        Args:
+            candy (int): 기계가 가지고 있는 Candy 개수
+
+        """
         self.count += candy
 
     def set_state(self, state: State) -> None:
         """Candy machine 상태 설정
 
         Args:
-            state: Candy machine에 셋팅할 상태
+            state (State): Candy machine에 셋팅할 상태
 
         Returns:
             None

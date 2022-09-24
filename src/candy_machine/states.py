@@ -19,10 +19,7 @@ if TYPE_CHECKING:
 
 
 class SoldState(State):
-    """summary
-    Description:
-        판매 상태에 대한 변화 정의
-    """
+    """summary판매 상태에 대한 변화 정의"""
 
     def __init__(self, candy_machine: "CandyMachine") -> None:
         super().__init__()
@@ -50,10 +47,7 @@ class SoldState(State):
 
 
 class SoldOutState(State):
-    """summary
-    Description:
-        매진 상태에 대한 변화 정의
-    """
+    """summary매진 상태에 대한 변화 정의"""
 
     def __init__(self, candy_machine: "CandyMachine") -> None:
         super().__init__()
@@ -77,10 +71,7 @@ class SoldOutState(State):
 
 
 class HasQuarterState(State):
-    """summary
-    Description:
-        동전 소유 상태에 대한 변화 정의
-    """
+    """summary동전 소유 상태에 대한 변화 정의"""
 
     def __init__(self, candy_machine: "CandyMachine") -> None:
         super().__init__()
@@ -110,10 +101,7 @@ class HasQuarterState(State):
 
 
 class NoQuarterState(State):
-    """summary
-    Description:
-        동전 없음 상태에 대한 변화 정의
-    """
+    """동전 없음 상태에 대한 변화 정의"""
 
     def __init__(self, candy_machine: "CandyMachine") -> None:
         super().__init__()
@@ -138,10 +126,7 @@ class NoQuarterState(State):
 
 
 class WinnerState(State):
-    """summary
-    Description:
-        이벤트 당첨에 대한 변화 정의
-    """
+    """이벤트 당첨에 대한 변화 정의"""
 
     def __init__(self, candy_machine: "CandyMachine") -> None:
         super().__init__()

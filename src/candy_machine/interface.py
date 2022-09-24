@@ -13,10 +13,7 @@ from abc import abstractmethod
 
 
 class State:
-    """summary
-    Description:
-        Candy machine 상태 인터페이스
-    """
+    """Candy machine 상태 인터페이스"""
 
     @abstractmethod
     def __init__(self) -> None:
