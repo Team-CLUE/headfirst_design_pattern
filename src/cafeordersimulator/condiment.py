@@ -44,6 +44,16 @@ class CondimentDecorator(Beverage):
         """
         return self._beverage.get_description()
 
+    def get_size(self) -> Any:
+        """
+        Description:
+            상속받는 클래스에 따라 Beverage의 사이즈 출력 구현
+
+        Returns:
+            beverage.get_size
+        """
+        return self._beverage.get_size()
+
     def cost(self) -> Any:
         """
         Description:
@@ -64,6 +74,10 @@ class Mocha(CondimentDecorator):
         Mocha를 나타내는 클래스
     """
 
+    # def __init__(self, bevarage: Beverage) -> None:
+    #     super().__init__()
+    #     self._beverage = bevarage
+
     def get_description(self) -> Any:
         """
         Description:
@@ -72,13 +86,21 @@ class Mocha(CondimentDecorator):
         Returns:
             beverage의 이름 + ", 모카"
         """
-        return self.beverage.get_description() + ", 모카"
+        return self._beverage.get_description() + ", 모카"
 
     def cost(self) -> Any:
         """
         Description:
-            cost 계산시 0.2를 더해준다.
+            cost 계산시 size에 따라서 cost를 계산해준다.
         Returns:
-            beverage cost + 0.2
+            beverage cost + size depends cost
         """
-        return self.beverage.cost() + 0.20
+        beverage_cost = self._beverage.cost()
+
+        if self._beverage.get_size() == "tall":
+            beverage_cost += 0.10
+        elif self._beverage.get_size() == "grande":
+            beverage_cost += 0.15
+        elif self._beverage.get_size() == "venti":
+            beverage_cost += 0.20
+        return beverage_cost
