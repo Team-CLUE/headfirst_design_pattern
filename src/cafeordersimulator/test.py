@@ -17,17 +17,21 @@ def main() -> None:
     """summary
     Description:
         Test 진행함수
-    Args :
-        None
-    Returns :
-        None
     """
     bevarage = Espresso()
-    print(bevarage.getdescription() + " $" + str(bevarage.cost()))
+    print(bevarage.get_description() + " $" + str(bevarage.cost()))
+    assert bevarage.get_description() == "Espresso"
 
     beverage2 = HouseBlend()
     beverage2 = Mocha(beverage2)
-    print(beverage2.getdescription() + " $" + str(beverage2.cost()))
+    print(beverage2.get_description() + " $" + str(beverage2.cost()))
+    assert beverage2.get_description() == "HouseBlend, 모카"
+
+    beverage3 = HouseBlend()
+    beverage3.set_size("venti")
+    beverage3 = Mocha(beverage3)
+    print(beverage3.cost())
+    assert beverage3.cost() == 1.09
 
 
 if __name__ == "__main__":
