@@ -45,7 +45,7 @@ class CondimentDecorator(Beverage):
         """
         return self._beverage
 
-    def getdescription(self) -> Any:
+    def get_description(self) -> Any:
         """summary
         Description:
             상속받는 클래스에 따라 Beverage의 이름 출력 구현
@@ -78,7 +78,7 @@ class Mocha(CondimentDecorator):
         Mocha를 나타내는 클래스
     """
 
-    def getdescription(self) -> Any:
+    def get_description(self) -> Any:
         """summary
         Description:
             설명을 덧붙이는 함수

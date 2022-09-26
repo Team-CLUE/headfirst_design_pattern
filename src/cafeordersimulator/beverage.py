@@ -45,7 +45,7 @@ class Espresso(Beverage):
         Beverage 중 Espresso 클래스
     """
 
-    def getdescription(self) -> str:
+    def get_description(self) -> str:
         """Espresso 이름 출력 구현
 
         Args:
@@ -74,7 +74,7 @@ class HouseBlend(Beverage):
         Beverage 중 Espresso 클래스
     """
 
-    def getdescription(self) -> str:
+    def get_description(self) -> str:
         """Espresso 이름 출력 구현
 
         Args:
