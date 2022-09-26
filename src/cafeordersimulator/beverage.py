@@ -17,7 +17,7 @@ class Beverage(metaclass=ABCMeta):
         다양한 Beverage들을 구현하기 위한 Abstractive class
     """
 
-    def getdescription(self) -> str:
+    def get_description(self) -> str:
         """상속받는 클래스에 따라 Beverage의 이름 출력 구현
 
         Args:
