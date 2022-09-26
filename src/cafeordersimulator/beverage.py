@@ -30,6 +30,7 @@ class Beverage(metaclass=ABCMeta):
         """
         Description:
             Beverage의 사이즈 지정
+
         args :
             size : Beverage의 사이즈
         """
@@ -58,12 +59,14 @@ class Espresso(Beverage):
 
     def get_description(self) -> str:
         """Espresso 이름 출력 구현
+
         Returns: name of beverage
         """
         return "Espresso"
 
     def cost(self) -> float:
         """Espresso 가격 출력 구현
+
         Returns: cost of beverage
         """
         return 1.99
@@ -77,12 +80,14 @@ class HouseBlend(Beverage):
 
     def get_description(self) -> str:
         """Espresso 이름 출력 구현
+
         Returns: name of beverage
         """
         return "HouseBlend"
 
     def cost(self) -> float:
         """Espresso 가격 출력 구현
+
         Returns: cost of beverage
         """
         return 0.89
